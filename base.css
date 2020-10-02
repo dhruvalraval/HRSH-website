@@ -1,0 +1,185 @@
+@import url('./assets/fonts/akzidenz-grotesk.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --black: #181818;
+    --white: #f8f1ff;
+    --purple: #905dce;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'akzidenzgroteskregular', Arial, Helvetica, sans-serif;    
+}
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+header{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 100%;
+    place-items: center;
+    padding: 20px 40px;
+    z-index: 1000;
+}
+
+#logo{
+    justify-self: start;
+    align-self: center;
+    font-size: 1.8rem;
+    opacity: 0;
+}
+
+#nav{
+    grid-column: 3/-1;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    display: grid;
+    place-items:  center end;
+    letter-spacing: 1px;
+    transition: 0.6s all ease-in-out;
+}
+
+#nav img{
+    justify-self: end;
+    object-fit: contain;
+    opacity: 0;
+    width: clamp(50px, 4.5vw, 100px);
+    height: clamp(50px, 4.5vw, 100px);
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.sound-wrapper{
+    top: 90%;
+    left: 0;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    margin: 20px 40px 20px 40px;
+    display: grid;
+    place-items: center;
+    z-index: 100;
+}
+
+.sound{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+    z-index: 100;
+}
+
+section{
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    z-index: 50;
+}
+
+.intro-text{
+    display: grid;
+    grid-template-rows: repeat(auto, minmax(10px, 60%));
+    grid-template-columns: 100%;
+    place-items: center end;
+    border: 1px solid white;
+}
+
+.intro-text h1{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-align: right;
+    opacity: 0;
+}
+
+.intro-text a{
+    font-size: 1.8rem;
+    color: var(--purple);
+}
+
+
+
+
+
+
+
+
+
+/*! locomotive-scroll v3.6.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+    overflow: hidden; }
+  
+  html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  
+  .has-scroll-smooth body {
+    overflow: hidden; }
+  
+  .has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh; }
+  
+  .c-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0; }
+    .c-scrollbar:hover {
+      transform: scaleX(1.45); }
+    .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+      opacity: 1; }
+  
+  .c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.1;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: -webkit-grab;
+    cursor: grab; }
+    .has-scroll-dragging .c-scrollbar_thumb {
+      cursor: -webkit-grabbing;
+      cursor: grabbing; }
